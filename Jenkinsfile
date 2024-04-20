@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'sh 'docker build -t mubeen507/ecomm999 .'
             }
         }
         stage('Test') {
