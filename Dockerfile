@@ -1,6 +1,10 @@
 # Use the official Nginx image as the base image
 FROM nginx:latest
-  RUN rm /usr/share/nginx/html/index.html
+
+#creating work dir 
+WORKDIR /app
+#copying content to app for volumes
+COPY . .
 # Copy the static website files to the Nginx html directory
 COPY . /usr/share/nginx/html/
 
