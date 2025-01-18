@@ -34,6 +34,11 @@ environment {
                 sh 'docker push mubeen507/ecomm2025'
             }
           }
+        stage('Running the docker container') {
+            steps {
+                sh 'docker run -d  --name ecommcont -p 80:80 mubeen507/ecomm2025'
+                }
+              } 
 
     }
 }
