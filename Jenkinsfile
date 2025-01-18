@@ -29,6 +29,11 @@ environment {
                 sh 'echo $dockerhub_PSW | docker login -u $dockerhub_USR --password-stdin'
             }
           }
+         stage('Docker Push') {  
+            steps {
+                sh 'docker push mubeen507/ecomm2025'
+            }
+          }
 
     }
 }
